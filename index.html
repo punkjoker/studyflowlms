@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyFlow LMS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f4a261, #e76f51, #2a9d8f, #264653);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      color: black;
+    }
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 1em 0;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    nav a {
+      color: black;
+      padding: 1em;
+      text-decoration: none;
+      text-align: center;
+    }
+    nav a:hover {
+      background-color: #8BC34A;
+      color: white;
+    }
+    .container {
+      padding: 2em;
+    }
+    .hero {
+      position: relative;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 2em;
+      color: white;
+    }
+    .hero img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      animation: slideshow 15s infinite;
+    }
+    @keyframes slideshow {
+      0% { opacity: 1; }
+      33% { opacity: 0; }
+      66% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    .hero img:nth-child(2) {
+      animation-delay: 5s;
+    }
+    .hero img:nth-child(3) {
+      animation-delay: 10s;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2em;
+    }
+    .feature {
+      background-color: white;
+      margin: 1em;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      flex: 1 1 30%;
+      text-align: center;
+    }
+    .feature i {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+      color: #8BC34A;
+    }
+    .login-section {
+      background-color: white;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin: 2em auto;
+      max-width: 400px;
+    }
+    .login-section input[type="text"],
+    .login-section input[type="password"] {
+      width: 80%;
+      padding: 1em;
+      margin: 0.5em 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .login-section button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  background-color: #8BC34A;
+  color: white;
+  cursor: pointer;
+  max-width: 200px; /* add this property */
+}
+    .login-section button:hover {
+      background-color: #7CB342;
+    }
+    .login-section a {
+      color: #8BC34A;
+      display: block;
+      margin: 1em 0;
+      text-decoration: none;
+    }
+    .login-section a:hover {
+      text-decoration: underline;
+    }
+    .login-section .login-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+  flex-wrap: wrap; /* add this property */
+}
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>StudyFlow LMS</h1>
+  </header>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="hero">
+    <img src="images/online.jpg" alt="">
+    <img src="images/online2.jpg" alt="Slide 2">
+    <img src="images/online3.jpg" alt="Slide 3">
+    <div>
+      <h1>Welcome to StudyFlow LMS</h1>
+      <p>Your Gateway to Learning</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="login-section">
+      <h2>Login</h2>
+      <form>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <div class="login-options">
+          <button type="submit">Student Login</button>
+          <button type="submit">Instructor Login</button>
+        </div>
+        <a href="#">Forgot your password?</a>
+        <a href="#">Sign up</a>
+      </form>
+    </div>
+    <section id="features" class="features">
+      <div class="feature">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <h2>Expert Lecturers</h2>
+        <p>Learn from the best in the field.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-book-open"></i>
+        <h2>Comprehensive Modules</h2>
+        <p>Access a wide range of modules.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-users"></i>
+        <h2>Community Support</h2>
+        <p>Join a community of learners.</p>
+      </div>
+    </section>
+    <section id="about">
+      <h2>About StudyFlow LMS</h2>
+      <p>StudyFlow LMS is an innovative learning management system designed to provide a seamless learning experience. With expert lecturers, comprehensive modules, and community support, StudyFlow LMS is your gateway to knowledge.</p>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>For any inquiries, please reach out to us at <a href="mailto:support@studyflow.com">support@studyflow.com</a>.</p>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2024 StudyFlow LMS. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
